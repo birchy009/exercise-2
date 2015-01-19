@@ -1,0 +1,49 @@
+/* This file imports all your scss partials to be compiled in one stylesheet which you can attach to your html.
+
+All the files that are prefixed with an underscore "_name-of-file.scss are called partials - meaning that their css 
+isn't compiled unless it's imported into an unprefixed .scss file */
+/* are placeholders for storing information that you want to reuse throughout your stylesheet
+You can store things like colours, font-stacks, or any css value you think you might want to reuse
+SASS uses the '$' to declare variables.*/
+/* line 3, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+body {
+  font-family: Helvetica, Arial, sans-serif; }
+
+/* line 8, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.primary-btn {
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  margin: 1em;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 150ms ease-in-out; }
+  /* line 13, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/mixins */
+  .primary-btn:hover { }
+
+/* line 12, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.secondary-btn {
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 3px;
+  margin: 1em;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 150ms ease-in-out; }
+  /* line 13, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/mixins */
+  .secondary-btn:hover { }
+
+/* line 16, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.border {
+  border: 1px solid #ccc; }
+  /* line 19, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+  .border p {
+    color: red; }
+
+@extent .border;
+/* line 28, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+a {
+  border: 1px solid red; }
+  /* line 30, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+  a:hover {
+    border: 1px solid blue; }

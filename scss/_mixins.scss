@@ -1,5 +1,6 @@
 // Mixins
 
+/*
 @mixin button($bg-color, $hover-color, $text-color){
 	background-color: $bg-color;
 	color: $text-color;
@@ -13,4 +14,9 @@
 	&:hover {
 		background-color: $hover-color;
 	}
+}
+*/
+
+@mixin transition($time, $ease) {
+	transition: all $time, $ease;
 }

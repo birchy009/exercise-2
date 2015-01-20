@@ -5,45 +5,185 @@ isn't compiled unless it's imported into an unprefixed .scss file */
 /* are placeholders for storing information that you want to reuse throughout your stylesheet
 You can store things like colours, font-stacks, or any css value you think you might want to reuse
 SASS uses the '$' to declare variables.*/
-/* line 3, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
-body {
-  font-family: Helvetica, Arial, sans-serif; }
+/*
+@mixin button($bg-color, $hover-color, $text-color){
+	background-color: $bg-color;
+	color: $text-color;
+	padding: 0.5em 1em;
+	border-radius: 3px;
+	margin: 1em;
+	display: inline-block;
+	text-decoration: none;
+	transition: all 150ms ease-in-out;
+	// references the parent selector using the '&'
+	&:hover {
+		background-color: $hover-color;
+	}
+}
+*/
+@-moz-viewport {
+  width: device-width;
+  scale: 1; }
 
-/* line 8, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
-.primary-btn {
+@-ms-viewport {
+  width: device-width;
+  scale: 1; }
+
+@-o-viewport {
+  width: device-width;
+  scale: 1; }
+
+@-webkit-viewport {
+  width: device-width;
+  scale: 1; }
+
+@viewport {
+  width: device-width;
+  scale: 1; }
+
+/* line 9, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+html {
+  box-sizing: border-box;
+  background-color: #000;
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%; }
+
+/* line 23, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 27, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+section {
+  padding: 15em 0;
+  width: 100%; }
+
+/* line 32, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+h1 {
+  text-align: center;
+  font-weight: 200;
+  font-size: 3em;
+  color: #fff; }
+
+/* line 39, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.icons {
+  position: relative;
+  width: 100%;
+  text-align: center; }
+
+/* line 45, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+i {
+  font-size: 3em;
   color: #fff;
-  padding: 0.5em 1em;
-  border-radius: 3px;
-  margin: 1em;
   display: inline-block;
-  text-decoration: none;
-  transition: all 150ms ease-in-out; }
-  /* line 13, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/mixins */
-  .primary-btn:hover { }
+  transition: all 333ms linear; }
 
-/* line 12, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
-.secondary-btn {
+/* line 54, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.crown:hover, .crown:active {
+  color: #ff0; }
+
+/* line 59, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.mh:hover, .mh:active {
+  -webkit-transform: scale(2) rotate(360deg);
+      -ms-transform: scale(2) rotate(360deg);
+          transform: scale(2) rotate(360deg);
+  padding: 0 0.5em; }
+
+/* line 64, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.one {
+  opacity: 0;
+  padding: 0 0.35em 0 0.25em;
+  border-radius: 200px;
+  display: inline-block;
+  background-color: #f00;
+  font-size: 0.5em;
   color: #fff;
-  padding: 0.5em 1em;
-  border-radius: 3px;
-  margin: 1em;
+  position: absolute;
+  margin-left: -1em;
+  transition: all 500ms, linear; }
+
+/* line 80, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.mh:hover .one {
+  opacity: 1; }
+
+/* line 84, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.appear {
+  position: absolute;
+  margin-top: 0.75em;
+  margin-left: -0.5em;
+  opacity: 0;
+  transition: all 666ms, ease-in-out; }
+
+/* line 94, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
+.fb:hover .appear, .fb:active .appear {
+  opacity: 0.8; }
+
+@font-face {
+  font-family: 'custom-font';
+  src: url('../../fonts/custom-font.eot?89856806');
+  src: url('../../fonts/custom-font.eot?89856806#iefix') format('embedded-opentype'), url('../../fonts/custom-font.woff?89856806') format('woff'), url('../../fonts/custom-font.ttf?89856806') format('truetype'), url('../../fonts/custom-font.svg?89856806#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?89856806#fontello') format('svg');
+  }
+}
+*/
+/* line 22, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/custom-font */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "custom-font";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
   display: inline-block;
-  text-decoration: none;
-  transition: all 150ms ease-in-out; }
-  /* line 13, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/mixins */
-  .secondary-btn:hover { }
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: 0.2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: 0.2em
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
 
-/* line 16, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
-.border {
-  border: 1px solid #ccc; }
-  /* line 19, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
-  .border p {
-    color: red; }
+/* line 53, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/custom-font */
+.icon-facebook-squared:before {
+  content: '\e800'; }
 
-@extent .border;
-/* line 28, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
-a {
-  border: 1px solid red; }
-  /* line 30, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/main */
-  a:hover {
-    border: 1px solid blue; }
+/* '' */
+/* line 54, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/custom-font */
+.icon-crown:before {
+  content: '\e801'; }
+
+/* '' */
+/* line 55, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/custom-font */
+.icon-facebook:before {
+  content: '\e805'; }
+
+/* '' */
+/* line 56, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/custom-font */
+.icon-mail:before {
+  content: '\e806'; }
+
+/* '' */
+/* line 57, /Users/birchy009/Desktop/GD-Y3S2/Web Dev 5/exercise-2/scss/components/custom-font */
+.icon-mail-alt:before {
+  content: '\e807'; }
+
+/* '' */

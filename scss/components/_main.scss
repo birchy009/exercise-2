@@ -47,7 +47,7 @@ i {
 	color: $pri-type;
 
 	display: inline-block;
-	transition: all 333ms linear;
+	@include transition(333ms, linear);
 }
 
 .crown:hover,
